@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Sokol App</title>
+  </head>
+  <body>
+    <script>
+      // Load the Sokol application
+      const Module = {
+        onRuntimeInitialized: function () {
+          // Your initialization code can go here if needed
+        },
+      };
+
+      // Create a canvas element
+      const canvas = document.createElement("canvas");
+      document.body.appendChild(canvas);
+
+      // Initialize Sokol and run the application
+      Module.canvas = canvas;
+      Module.setStatus = function (text) {
+        // Handle status updates if needed
+      };
+
+      // Load the sokol_app.wasm file
+      const script = document.createElement("script");
+      script.src = "sokol_app.wasm";
+      script.onload = function () {
+        // Run the Sokol application
+        Module.runSokolApp();
+      };
+
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>
