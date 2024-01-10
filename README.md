@@ -1,6 +1,6 @@
 `git submodule init . && git submodule add https://github.com/floooh/sokol external_lib/sokol`
 
-git submodule update --init --recursive
+`git submodule update --init --recursive` update sokol lib
 
 ```bash
 git submodule [--quiet] [--cached]
@@ -9,12 +9,6 @@ git submodule [--quiet] [--cached]
    or: git submodule [--quiet] init [--] [<path>...]
    or: git submodule [--quiet] deinit [-f|--force] (--all| [--] <path>...)
    or: git submodule [--quiet] update [--init [--filter=<filter-spec>]] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-shallow] [--reference <repository>] [--recursive] [--[no-]single-branch] [--] [<path>...]
-   or: git submodule [--quiet] set-branch (--default|--branch <branch>) [--] <path>
-   or: git submodule [--quiet] set-url [--] <path> <newurl>
-   or: git submodule [--quiet] summary [--cached|--files] [--summary-limit <n>] [commit] [--] [<path>...]
-   or: git submodule [--quiet] foreach [--recursive] <command>
-   or: git submodule [--quiet] sync [--recursive] [--] [<path>...]
-   or: git submodule [--quiet] absorbgitdirs [--] [<path>...]
 ```
 
 `gcc external_lib/sokol/tests/compile/sokol_app.c -o meu_app -I ./external_lib/sokol -I ./external_lib/sokol/util -Lexternal_lib -lEGL -lX11 -lXi -lXcursor -lEGL -lGL -ldl -pthread -lm`
