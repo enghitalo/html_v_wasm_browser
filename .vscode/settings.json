@@ -4,6 +4,7 @@
         "sokol_glue.h": "c",
         "sokol_gfx.h": "c",
         "sokol_args.h": "c",
-        "sokol_log.h": "c"
+        "sokol_log.h": "c",
+        "html5.h": "c"
     }
 }

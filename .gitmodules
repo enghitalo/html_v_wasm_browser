@@ -1,3 +1,6 @@
 [submodule "external_lib/sokol"]
 	path = external_lib/sokol
 	url = https://github.com/floooh/sokol
+[submodule "external_lib/emscripten"]
+	path = external_lib/emscripten
+	url = https://github.com/emscripten-core/emscripten

@@ -1,5 +1,7 @@
 `git submodule init . && git submodule add https://github.com/floooh/sokol external_lib/sokol`
 
+`git submodule add https://github.com/emscripten-core/emscripten external_lib/emscripten`
+
 `git submodule update --init --recursive` update sokol lib
 
 ```bash
@@ -24,5 +26,15 @@ git submodule [--quiet] [--cached]
     things will happen, see here for details: https://github.com/floooh/sokol/issues/376
 ```
 
-`emcc sokol_app.c -o build/sokol_app.html --shell-file shell_minimal.html -I ./external_lib/sokol -I ./external_lib/sokol/util -Lexternal_lib -sUSE_WEBGL2 && python3 -m http.server -d build`
+`emcc sokol_app.c -o build/sokol_app.html --shell-file=shell_minimal.html -I ./external_lib/sokol -I ./external_lib/sokol/util -Lexternal_lib -sUSE_WEBGL2 && python3 -m http.server -d build`
 `gcc sokol_sapp.c -o build/meu_app -I ./external_lib/sokol -I ./external_lib/sokol/util -Lexternal_lib -lEGL -lX11 -lXi -lXcursor -lEGL -lGL -ldl -pthread -lm `
+
+#### Install
+
+`sudo apt-get install emscripten`
+
+```sh
+> emcc bufferoffsets-emsc.c -o build/bufferoffsets-emsc.html  -I ./external_lib/sokol -I ./external_lib/sokol/util -Lexternal_lib -sUSE_WEBGL2 --shell-file=shell_minimal.html
+> emrun build/bufferoffsets-emsc.html
+> python3 -m http.server -d build
+```
