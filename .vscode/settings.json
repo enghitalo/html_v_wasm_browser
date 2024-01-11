@@ -5,6 +5,7 @@
         "sokol_gfx.h": "c",
         "sokol_args.h": "c",
         "sokol_log.h": "c",
-        "html5.h": "c"
+        "html5.h": "c",
+        "stb_image.h": "c"
     }
 }
